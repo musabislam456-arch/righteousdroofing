@@ -1,0 +1,8 @@
+---
+const { eyebrow, title, copy = '', theme = 'light', number = '', id = undefined } = Astro.props;
+---
+<div class={`section-heading section-heading--${theme}`}>
+  <div class="section-heading__eyebrow"><span>{eyebrow}</span>{number && <span class="section-heading__number">{number}</span>}</div>
+  <h2 id={id}>{title}</h2>
+  {copy && <p>{copy}</p>}
+</div>

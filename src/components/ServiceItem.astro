@@ -1,0 +1,17 @@
+---
+const { number, title, description, icon } = Astro.props;
+---
+<article class="service-item">
+  <span class="service-item__number">{number}</span>
+  <div class="service-item__symbol" aria-hidden="true">
+    {icon === 'roof' && <svg viewBox="0 0 64 64"><path d="M7 29 32 9l25 20M15 25v27h34V25M27 52V36h10v16"/><path d="m18 22 14-11 14 11"/></svg>}
+    {icon === 'repair' && <svg viewBox="0 0 64 64"><path d="M9 29 32 11l23 18M16 26v27h32V26M27 53V38h10v15"/><path d="m34 18-5 10 7 2-6 10"/></svg>}
+    {icon === 'build' && <svg viewBox="0 0 64 64"><path d="M8 54V27l15-9 11 7v29M34 54V14l11-6 11 6v40M4 54h56"/><path d="M16 34h5m-5 8h5m4-15h5m-5 8h5m10-9h5m-5 8h5m-5 8h5"/></svg>}
+  </div>
+  <div class="service-item__content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a href="#contact" class="text-link">Talk about this service <span aria-hidden="true">↗</span></a>
+  </div>
+  <span class="service-item__arrow" aria-hidden="true">↗</span>
+</article>

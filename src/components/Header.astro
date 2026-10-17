@@ -1,0 +1,25 @@
+---
+import BrandMark from './BrandMark.astro';
+import { siteConfig } from '../../site.config.mjs';
+---
+<div class="utility-bar">
+  <div class="shell utility-bar__inner">
+    <span><span class="status-dot" aria-hidden="true"></span> Roofing &amp; construction · Kumasi, Ghana</span>
+    <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay} <span aria-hidden="true">↗</span></a>
+  </div>
+</div>
+<header class="site-header" id="site-header">
+  <div class="shell site-header__inner">
+    <BrandMark />
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span>
+    </button>
+    <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Project showcase</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Location</a>
+      <a class="nav-call" href={siteConfig.phoneHref}>Call the team <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>

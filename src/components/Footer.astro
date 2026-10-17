@@ -1,0 +1,31 @@
+---
+import BrandMark from './BrandMark.astro';
+import { siteConfig } from '../../site.config.mjs';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="shell site-footer__top">
+    <div class="site-footer__brand">
+      <BrandMark />
+      <p>Roofing and building work, based in Kumasi.</p>
+    </div>
+    <div class="site-footer__links">
+      <span class="footer-label">Explore</span>
+      <a href="#services">Services</a>
+      <a href="#work">Project showcase</a>
+      <a href="#reviews">Customer reviews</a>
+      <a href="#location">Find us</a>
+    </div>
+    <div class="site-footer__contact">
+      <span class="footer-label">Speak with the team</span>
+      <a class="footer-phone" href={siteConfig.phoneHref}>{siteConfig.phoneDisplay} <span aria-hidden="true">↗</span></a>
+      <p>{siteConfig.address}</p>
+      <a class="footer-directions" href={siteConfig.mapsUrl} target="_blank" rel="noreferrer">Open directions <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="shell site-footer__bottom">
+    <span>© {year} RIGHTEOUS-D ROOFING COMPANY</span>
+    <span>Roofing · Repairs · Construction</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>

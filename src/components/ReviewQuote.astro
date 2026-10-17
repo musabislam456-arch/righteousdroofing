@@ -1,0 +1,8 @@
+---
+const { name, quote, featured = false, index = '01' } = Astro.props;
+---
+<article class:list={["review-quote", featured && 'review-quote--featured']}>
+  <div class="review-quote__top"><span class="review-quote__index">{index}</span><span class="review-stars" aria-label="5 stars">★★★★★</span></div>
+  <blockquote>“{quote}”</blockquote>
+  <div class="review-quote__byline"><span class="review-quote__avatar" aria-hidden="true">{name.trim().charAt(0).toUpperCase()}</span><cite>{name}</cite></div>
+</article>
